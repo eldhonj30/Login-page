@@ -1,0 +1,36 @@
+<section>
+    <div class="container">
+        <table class="table mt-4" id="userTable">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">➩</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">e-mail</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                {{#each users}}
+                <tr>
+                    <th scope="row">.</th>
+                    <td>{{this.username}}</td>
+                    <td>{{this.email}}</td>
+                </tr>
+                {{/each}}
+
+            </tbody>
+        </table>
+    </div>
+</section>
+
+
+
+
+ <script>
+  $(function(){
+    $('#userTable').DataTable({
+        "dom": '<"top"i>rt<"bottom"flp><"clear">',
+    });
+  })
+</script>
+

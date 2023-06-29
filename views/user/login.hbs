@@ -1,0 +1,30 @@
+
+
+    <div class="row">
+  <div class="col-md-6 m-auto">
+    <div class="container mt-5 pl-5">
+      <h1 style="margin-bottom: 30px;">Login</h1>
+      <form action="/login" method="POST">
+        {{#if loginError}}
+          <p style="color: red;">{{loginError}}</p>
+        {{/if}}
+        <div class="mb-3">
+          <label for="email" class="form-label">Email Address:</label>
+          <input type="email" class="form-control" id="email" name="email" style="width: 100%;" required>
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Password:</label>
+          <input type="password" class="form-control" id="password" name="password" style="width: 100%;" required>
+        </div>
+        <div class="mb-3">
+          <a href="/signup" style="color: blue;">Create new Account..?</a>
+        </div>
+        <div class="mb-3">
+          <a href="/admin" style="color: blue;">Admin-LogIn</a>
+        </div>
+        <button type="submit" class="btn btn-primary float-right" style="width: 100%;">Login</button>
+      </form>
+    </div>
+  </div>
+</div>
+
